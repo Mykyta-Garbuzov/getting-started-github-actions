@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Getting Started
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.fcc228ea-773b-4a67-8700-ea1da9e5d83f}}
+          heroku_app_name: "javalessen"
+          heroku_email: "garbuzovnikits@gmail.com"
+        
